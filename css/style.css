@@ -173,6 +173,10 @@ body {
   padding: 5px 31px 5px 31px;
   color: #fff;
 }
+.t {
+  width: 90%;
+
+}
 
 /*SECCION 4*/
 
@@ -367,6 +371,10 @@ textarea {
   .banner-btn {
     padding: 10px 28px 10px 28px;
   }
+  .sec2-btn {
+   padding: 5px 10px 5px 10px;
+    
+}
 }
 
 @media (max-width: 425px) {
