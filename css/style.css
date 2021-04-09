@@ -156,7 +156,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 30% 0%;
-  height: 420px;
+  height: 500px;
   text-align: center;
 }
 .banner-titulo {
@@ -195,6 +195,7 @@ body {
   padding: 10% 10% 0 10%;
 }
 .sec2-btn {
+  font-weight: 500;
   background: transparent;
   box-shadow: 0px 20px 45px #0000001a;
   border: 2px solid #ffffff;
@@ -202,9 +203,20 @@ body {
   padding: 5px 31px 5px 31px;
   color: #fff;
 }
+.sec2-btn:hover {
+  background: #fff;
+ 
+  color: #312783;
+  
+}
+
+
 .t {
   width: 90%;
 
+}
+.t:hover {
+  border: 3px solid #0d0d0e00;
 }
 @media (min-width: 1025px) {
   .sec2-tarjeta {
@@ -219,6 +231,7 @@ body {
     0% no-repeat padding-box;
   padding: 50px !important;
   box-shadow: 0px 10px 45px #0000001a;
+  border-radius: 8px;
 }
 .sec4-titulo {
   margin-top: 16%;
