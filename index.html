@@ -27,11 +27,11 @@
 
 </head>
 
-<body>
+<body id="home">
   <!--MENU-->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
     <div class="container-fluid max-w">
-      <a class="navbar-brand" href="#"><img src="./img/logos/logo-Inforce-menunav.svg" alt=""></a>
+      <a class="navbar-brand" href="index.html"><img src="./img/logos/logo-Inforce-menunav.svg" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -47,19 +47,18 @@
               Servicios
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="./pages/servicios-seguridad-fisica.html">Seguridad física</a></li>
+              <li><a class="dropdown-item" href="./pages/servicios-seguridad-virtual.html">Seguridad virtual</a></li>
+              <li><a class="dropdown-item" href="./pages/servicios-seguridad-combinada.html">Seguridad combinada</a></li>
+              <li><a class="dropdown-item" href="./pages/servicios-app.html">App Inforce S.O.S</a></li>
+              <li><a class="dropdown-item" href="./pages/servicios-servicio-de-limpieza.html">Servicio de limpieza</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Trabajá con nosotros</a>
+            <a class="nav-link" href="./pages/trajabaja-con-nosotros.html">Trabajá con nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contacto</a>
+            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
           </li>
         </ul>
 
@@ -118,35 +117,40 @@
             <img class="t" src="./img/background-img-seguridadfisica.png" alt="seguridad fisica">
             <div class="sec2-tarjeta">
               <h4 class="text-white mb-3">Seguridad Física</h4>
-              <button class="sec2-btn">Ver detalles</button>
+              <a href="./pages/servicios-seguridad-fisica.html"><button class="sec2-btn">Ver detalles</button></a>
+              
             </div>
           </div>
           <div class="col-sm   position-relative px-0">
             <img class="t" src="./img/background-img-seguridadVirtual.png" alt="seguridad virtual">
             <div class="sec2-tarjeta">
-              <h4 class="text-white mb-3">Seguridad Física</h4>
-              <button class="sec2-btn">Ver detalles</button>
+              <h4 class="text-white mb-3">Seguridad Virtual</h4>
+              <a href="./pages/servicios-seguridad-virtual.html"><button class="sec2-btn">Ver detalles</button></a>
+              
             </div>
           </div>
           <div class="col-sm   position-relative px-0">
             <img class="t" src="./img/background-img-seguridadCombinada.png" alt="seguridad combinada">
             <div class="sec2-tarjeta">
-              <h4 class="text-white mb-3">Seguridad Física</h4>
-              <button class="sec2-btn">Ver detalles</button>
+              <h4 class="text-white mb-3">Seguridad Combinada</h4>
+              <a href="./pages/servicios-seguridad-combinada.html"><button class="sec2-btn">Ver detalles</button></a>
+              
             </div>
           </div>
           <div class="col-sm   position-relative px-0">
             <img class="t" src="./img/background-img-appInforce.png" alt="app Inforce">
             <div class="sec2-tarjeta">
-              <h4 class="text-white mb-3">Seguridad Física</h4>
-              <button class="sec2-btn">Ver detalles</button>
+              <h4 class="text-white mb-3">App Inforce SOS</h4>
+              <a href="./pages/servicios-app.html"><button class="sec2-btn">Ver detalles</button></a>
+              
             </div>
           </div>
           <div class="col-sm   position-relative px-0">
             <img class="t" src="./img/background-img-servicioDeLimpieza.png" alt="servicio de limpieza">
             <div class="sec2-tarjeta">
-              <h4 class="text-white mb-3">Seguridad Física</h4>
-              <button class="sec2-btn">Ver detalles</button>
+              <h4 class="text-white mb-3">Servicio de Limpieza</h4>
+              <a href="./pages/servicios-servicio-de-limpieza.html"><button class="sec2-btn">Ver detalles</button></a>
+              
             </div>
           </div>
         </div>
@@ -311,7 +315,7 @@
           </div>
         </div>
         <div class="col-sm-5 px-0">
-          <img class="w-100" src="./img/img-responsabilidadsocial.png" alt="responsabilidad social">
+          <img class="full" src="./img/img-responsabilidadsocial.png" alt="responsabilidad social">
         </div>
       </div>
     </div>
@@ -323,16 +327,16 @@
         <div class="col-sm ">
           <h2 class="ka-32 color mb-4 text-sm-start text-center escritorio">Solicitá tu presupuesto</h2>
           <p class="no-16 m-0 text-sm-start text-center escritorio">Completá con tus datos el formulario para que brindemos una respuesta a tu necesidad.</p>
-          <img class="form-logo my-5" src="./img/logos/logo-inforce-DatosContacto.svg" alt="logo inforce">
+          <img class="form-logo my-5" src="../img/logos/logo-inforce-DatosContacto.svg" alt="logo inforce">
           <div>
             <p class="no-16 m-0 text-sm-start text-center">Mariano Larra 3375. Bo URCA.</p>
             <p class="no-16 mb-4 text-sm-start text-center">Córdoba, Argentina.</p>
           </div>
           <p class="no-16 text-sm-start text-center">Telefono: 0351 4818269</p>
           <div class="d-flex ">
-            <a href="https://www.facebook.com/Inforce-Seguridad-Privada-1900837573463563"><img class="me-3"
-                src="./img/iconos/logo-facebook.svg" alt="facebook inforce"></a>
-            <a href=""><img src="./img/iconos/logo-linkedin.svg" alt="linkedin iforce"></a>
+            <a class="ms-sm-0 ms-auto" href="https://www.facebook.com/Inforce-Seguridad-Privada-1900837573463563"><img class="me-3"
+                src="../img/iconos/logo-facebook.svg" alt="facebook inforce"></a>
+            <a class=" me-auto" href=""><img src="../img/iconos/logo-linkedin.svg" alt="linkedin iforce"></a>
           </div>
         </div>
         <div class="col-sm sec8-1">
@@ -384,9 +388,9 @@
   </div>
   <!--FOOTER-->
   <div class="footer space">
-    <img class="footer-img" src="./img/logos/logo-Inforce-footer.svg" alt="inforce logo">
+    <img class="footer-img" src="../img/logos/logo-Inforce-footer.svg" alt="inforce logo">
     <a href="https://wa.me/">
-      <img class="icon-wp" src="./img/whatsapp_logo_icon_147205.svg" alt="">
+      <img class="icon-wp" src="../img/whatsapp_logo_icon_147205.svg" alt="">
     </a>
   </div>
   <!--SCRYPTS-->
@@ -401,8 +405,8 @@
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>
   <!--JS-->
-  <script src="./js/index.js"></script>
-  <script src="./js/validator.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/validator.js"></script>
 </body>
 
 </html>

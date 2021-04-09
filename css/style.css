@@ -23,9 +23,18 @@ body {
 .space {
   margin-top: 120px;
 }
+.full {
+  width: 100%;
+  height: 100%;
+}
 
 /*FUENTES*/
 /*KANIT*/
+.ka-54 {
+  font-family: "Kanit", sans-serif;
+  font-size: min(9vw, 50px);
+}
+
 .ka-42 {
   font-family: "Kanit", sans-serif;
   font-size: min(9vw, 42px);
@@ -43,11 +52,22 @@ body {
 .no-16 {
   font-family: "Noto Sans", sans-serif;
   font-size: min(8vw, 16px);
+  color: #343A40;
 }
 
+/*OTRAS*/
+.no-10 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: min(4vw, 10px);
+  color: #343A40;
+
+}
 .color {
   color: #312783;
   font-weight: 600;
+}
+.c {
+  color: #312783;
 }
 
 .icon-wp {
@@ -65,7 +85,15 @@ body {
 
 
 
-
+.m-50 {
+  width: 50%;
+}
+@media (max-width: 426px) {
+  .m-50 {
+    width: 100%;
+  }
+  
+}
 
 
 
@@ -122,7 +150,7 @@ body {
   }
 }
 /*BANNER*/
-.banner {
+#home .banner {
   position: relative;
   background: url("../img/backgroun-hero-img.png");
   background-size: cover;
@@ -164,6 +192,7 @@ body {
   bottom: 6%;
   left: 0;
   right: 0;
+  padding: 10% 10% 0 10%;
 }
 .sec2-btn {
   background: transparent;
@@ -177,10 +206,15 @@ body {
   width: 90%;
 
 }
+@media (min-width: 1025px) {
+  .sec2-tarjeta {
+    padding: 15% 15% 0 15%;
+  }
+}
 
 /*SECCION 4*/
 
-.sec4 {
+#home .sec4 {
   background: transparent linear-gradient(107deg, #e10717 0%, #312783 100%) 0%
     0% no-repeat padding-box;
   padding: 50px !important;
@@ -242,7 +276,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
 }
 
 .sec6-btn {
@@ -410,7 +444,7 @@ textarea {
   /*SECCION 2*/
   .t {
     width: 90%;
-    height: 310px;
+    height: 450px;
     border-radius: 8px;
     margin-bottom: 20px;
   }

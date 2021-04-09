@@ -1,0 +1,222 @@
+/*CONTACTO*/
+/*BANNER*/
+#contacto .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/contacto/backgroun-hero-img.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #fff;
+}
+
+/*TRABAJA CON NOSOTROS*/
+/*BANNER*/
+#trab-nosotros .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/trabaja/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/*SEGURIDAD FISICA*/
+/*BANNER*/
+
+#seg-fisica .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/seguridadfisica/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#seg-fisica .inner {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#seg-fisica .inner img {
+  margin-bottom: 34px;
+}
+#seg-fisica .l1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 2px;
+  border-bottom: #bcb9d5 2px solid;
+  opacity: 1;
+}
+#seg-fisica .l2 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 2px;
+  border-bottom: #807ab2 2px solid;
+  opacity: 1;
+}
+#seg-fisica .l3 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 2px;
+  border-bottom: #322883 2px solid;
+  opacity: 1;
+}
+
+.f1 {
+  width: 60%;
+}
+
+#seg-fisica .check {
+  width: 3%;
+}
+
+@media (max-width: 425px) {
+  #seg-fisica .check {
+    width: 7%;
+  }
+}
+
+/*SEGURIDAD VIRTUAL*/
+/*BANNER*/
+
+#seg-virtual .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/seguridadvirtual/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#seg-virtual .virt-inner {
+  background: #fff;
+  padding: 25px;
+  border-radius: 0 0 8px 8px;
+  height: 350px;
+}
+#seg-virtual .virt-inner h4 {
+  font-weight: 600;
+}
+#seg-virtual .virt-trajetas img {
+  border-radius: 8px 8px 0 0;
+}
+@media (max-width: 425px) {
+  #seg-virtual .virt-trajetas {
+    margin-bottom: 20px;
+  }
+  #seg-virtual .virt-trajetas :nth-child(1) {
+    text-align: center !important;
+  }
+}
+
+/*SEGURIDAD COMBINADA*/
+/*BANNER*/
+
+#seg-combinada .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/seguridadcombinada/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#seg-combinada .med,
+#app .med,
+#limpieza .med {
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#seg-combinada .c1 img {
+  border-radius: 8px 0 0 8px;
+}
+#seg-combinada .c2 {
+  border-radius: 0 8px 8px 0;
+}
+@media (max-width: 425px) {
+  #seg-combinada .c1 img {
+    border-radius: 8px 8px 0 0;
+  }
+  #seg-combinada .c2 {
+    border-radius: 0 0 8px 8px;
+  }
+  #seg-combinada .med,
+  #app .med,
+  #limpieza .med {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*SEGURIDAD COMBINADA*/
+/*BANNER*/
+
+#app .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/app/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#app .inner-app {
+  padding: 20px 24px 20px 24px;
+  background: #fff;
+  border: 3px solid #00000000;
+  box-shadow: 0px 3px 35px #00000026;
+  border-radius: 8px;
+  max-width: 360px;
+}
+
+#app .inner-app:hover {
+  border: 3px solid #312783;
+}
+#app .img-app {
+  width: 100%;
+}
+
+/*SERVICIO DE LIMPIEZA*/
+/*BANNER*/
+
+#limpieza .banner {
+  margin-top: 71px;
+  width: 100%;
+  height: 250px;
+  background: url("../img/limpieza/backgroun-hero-img.png");
+  background-position: center;
+  display: flex;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
