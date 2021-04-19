@@ -10,7 +10,18 @@ body {
 *:after {
   box-sizing: inherit;
 }
-
+.body {
+  overflow-x: hidden;
+}
+.body::-webkit-scrollbar {
+  width: 5px;
+}
+.body::-webkit-scrollbar-thumb {
+  background-color: #ff4438;
+}
+.body::-webkit-scrollbar-track {
+  background: transparent;
+}
 .v-align {
   display: flex;
   align-items: center;
@@ -27,14 +38,12 @@ body {
   width: 100%;
   height: 100%;
 }
-
 /*FUENTES*/
 /*KANIT*/
 .ka-54 {
   font-family: "Kanit", sans-serif;
   font-size: min(9vw, 50px);
 }
-
 .ka-42 {
   font-family: "Kanit", sans-serif;
   font-size: min(9vw, 42px);
@@ -47,20 +56,17 @@ body {
   font-family: "Kanit", sans-serif;
   font-size: min(9vw, 15px);
 }
-
 /*NOTO SANS*/
 .no-16 {
   font-family: "Noto Sans", sans-serif;
   font-size: min(8vw, 16px);
   color: #343A40;
 }
-
 /*OTRAS*/
 .no-10 {
   font-family: "Noto Sans", sans-serif;
   font-size: min(4vw, 10px);
   color: #343A40;
-
 }
 .color {
   color: #312783;
@@ -69,7 +75,6 @@ body {
 .c {
   color: #312783;
 }
-
 .icon-wp {
   cursor: pointer;
   display: block;
@@ -82,22 +87,17 @@ body {
   text-align: center;
   z-index: 999;
 }
-
-
-
 .m-50 {
   width: 50%;
 }
 @media (max-width: 426px) {
   .m-50 {
     width: 100%;
-  }
-  
+  }  
 }
-
-
-
-
+#error {
+  color: #e10717;
+}
 @media (min-width: 769px) {
   .escritorio {
     visibility: visible;
@@ -115,7 +115,6 @@ body {
     height: 70px;
   }
 }
-
 @media (max-width: 426px) {
   .escritorio {
     visibility: collapse;
@@ -131,10 +130,8 @@ body {
   .icon-wp {
     width: 50px;
     height: 50px;
-  }
- 
+  } 
 }
-
 /*MENU*/
 .navbar {
   background: #312783;
@@ -185,7 +182,6 @@ body {
   margin-bottom: 41px;
   height: 62px;
 }
-
 /*SECCION 2*/
 .sec2-tarjeta {
   position: absolute;
@@ -204,47 +200,52 @@ body {
   color: #fff;
 }
 .sec2-btn:hover {
-  background: #fff;
- 
-  color: #312783;
-  
+  background: #fff; 
+  color: #312783;  
 }
-
-
 .t {
   width: 90%;
-
 }
 .t:hover {
   border: 3px solid #0d0d0e00;
 }
 @media (min-width: 1025px) {
   .sec2-tarjeta {
-    padding: 15% 15% 0 15%;
+    padding: 0 15% 0 15%;
   }
 }
 
 /*SECCION 4*/
 
 #home .sec4 {
-  background: transparent linear-gradient(107deg, #e10717 0%, #312783 100%) 0%
+  background: transparent linear-gradient(107deg, #e10716 0%, #312783 100%) 0%
     0% no-repeat padding-box;
+  position: relative;
   padding: 50px !important;
   box-shadow: 0px 10px 45px #0000001a;
-  border-radius: 8px;
+  border-radius: 8px;  
 }
+/*
+#home .sec4:before {
+  content:'';
+	position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+  background: transparent linear-gradient(107deg, #e10716 0%, #312783 100%) 0%
+    0% no-repeat padding-box;
+ z-index: 1 !important;
+}*/
 .sec4-titulo {
   margin-top: 16%;
   margin-bottom: 20px;
   line-height: 1.5;
 }
-
 .sec4-img {
   width: 100%;
 }
-
 /*SECCION 5*/
-
 .owl-stage-outer {
   background: #fff;
 }
@@ -254,27 +255,23 @@ body {
 .owl-nav {
   height: 0;
 }
-
 .owl-prev {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
 }
-
 .owl-next {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
 }
-
 .owl-prev span,
 .owl-next span {
   font-size: 60px;
   color: #757575;
 }
-
 /*SECCION 6*/
 .sec6 {
   box-shadow: 0px 20px 45px #00000014;
@@ -283,7 +280,13 @@ body {
 .sec6-inner img {
   width: 25%;
 }
-.sec6-inner,
+.sec6-inner {
+  padding: 30px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0 8px 8px 0;
+}
 .sec7-inner {
   padding: 30px !important;
   display: flex;
@@ -291,7 +294,6 @@ body {
   justify-content: space-around;
   border-radius: 8px 0 0 8px;
 }
-
 .sec6-btn {
   display: flex;
 }
@@ -301,11 +303,9 @@ body {
   border: 2px solid #312783;
   color: #fff;
   padding: 5px 50px 5px 50px;
-  width: 50%;
-  margin-right: 20px;
-  
+  width: 100%;
+  margin-right: 20px;  
 }
-
 .sec6-btn :nth-child(2) {
   background: #fff;
   box-shadow: 0px 20px 45px #0000001a;
@@ -315,13 +315,11 @@ body {
   width: 50%;
   font-weight: 700;
 }
-
 /*SECCION 7*/
 .sec7 {
   box-shadow: 0px 20px 45px #00000014;
   border-radius: 8px;
 }
-
 /*seccion8*/
 .sec8 {
   padding-left: 15% !important;
@@ -335,7 +333,6 @@ body {
   flex-direction: column;
   justify-content: space-around;
 }
-
 .cat-form-1 {
   width: 100%;
 }
@@ -348,7 +345,6 @@ body {
   width: 100%;
   margin-right: 20px;
 }
-
 form {
   margin: 0 auto;
   width: 100%;
@@ -369,6 +365,7 @@ textarea {
   border-radius: 5px;
   height: 40px;
   margin-bottom: 20px !important;
+  padding: 15px;
 }
 input:focus,
 textarea:focus {
@@ -380,7 +377,6 @@ textarea {
   resize: none !important;
   height: 5em;
 }
-
 /*FOOTER*/
 .footer {
   background: #312783;
@@ -394,22 +390,11 @@ textarea {
  margin-left: auto;
  margin-right: auto;
 }
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1024px) {
   .sec4-titulo {
     margin-top: 8%;
   }
 }
-
 @media (max-width: 769px) {
   .ka-42 {
     font-family: "Kanit", sans-serif;
@@ -419,20 +404,17 @@ textarea {
     padding: 10px 28px 10px 28px;
   }
   .sec2-btn {
-   padding: 5px 10px 5px 10px;
-    
+   padding: 5px 10px 5px 10px;    
 }
 }
-
 @media (max-width: 425px) {
   .ka-42 {
     font-family: "Kanit", sans-serif;
     font-size: min(9vw, 42px);
   }
-
   /*SECCION 1*/
   .banner-titulo {
-    padding-top: 60vh;
+    padding-top: 50vh;
     font-size: min(11vw, 40px);
     margin-left: 10px;
     margin-right: 10px;
@@ -441,7 +423,15 @@ textarea {
     font-size: min(8vw, 15px);
     padding: 10px 20px 10px 20px;
   }
-
+  #home .banner {
+    position: relative;
+    background: url("../img/backgroun-hero-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 30% 0%;
+    height: 600px;
+    text-align: center;
+  }
   .banner {
     background: url(../img/backgroun-hero-img-mobil.png);
     background-size: cover;
@@ -467,7 +457,6 @@ textarea {
   .sec2-btn {
     width: 80%;
   }
-
   /*SECCION 4*/
   .sec4 {
     width: 90% !important;
@@ -490,7 +479,6 @@ textarea {
     padding: 10px 10px 10px 10px;
     margin-bottom: 30px;
   }
-
   /*SECCION 6*/
   .sec6 {
     width: 88% !important;
@@ -500,7 +488,6 @@ textarea {
   .sec6-img {
     width: 100%;
     }
-
   .sec6-inner,
   .sec7-inner {
     padding: 15px !important;
@@ -509,11 +496,9 @@ textarea {
   .sec6-inner h2 {
     text-align: center;
   }
-
   .sec6-inner p {
     text-align: center;
   }
-
   .sec6-inner img {
     margin-right: auto;
     margin-left: auto;
@@ -522,7 +507,6 @@ textarea {
   .sec6-btn {
     display: block;
   }
-
   .sec6-btn :nth-child(1) {
     padding: 5px 0px 5px 0px;
     width: 100%;
@@ -535,7 +519,6 @@ textarea {
     padding: 5px 0px 5px 0px;
     font-size: min(9vw, 15px);
   }
-
   /*SECCION 7*/
   .sec7 {
     width: 88% !important;
@@ -544,25 +527,21 @@ textarea {
     border-radius:  8px;
   }
   .sec7-inner {
-    border-radius: 8px 8px 0 0 ;
-    
+    border-radius: 8px 8px 0 0 ;    
   }
   .sec7 div :nth-child(2) {
     border-radius: 0 0 8px 8px  ;
   }
-
   .sec7-img {
     display: flex;
     justify-content: space-between;
   }
-
   .sec7-img :nth-child(1){
     width: 20%;
   }
   .sec7-img :nth-child(2){
     width: 60%;
-  }
-  
+  }  
   /*SECCION 8*/
   .sec8 {
     width: 88% !important;
@@ -587,10 +566,6 @@ textarea {
 textarea {
   margin-bottom: 10px !important;
 }
-
-
-
-
 /*FOOTER*/
 .footer-img {
   width: 25%;

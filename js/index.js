@@ -37,7 +37,7 @@ $("#owl1").owlCarousel({
 
 
   /*Form de cv */
-
+if (document.querySelector('#file')) {
   document.querySelector('#file').addEventListener('change', function(e) {
     var boxFile = document.querySelector('.boxFile');
     boxFile.classList.remove('attached');
@@ -46,7 +46,7 @@ $("#owl1").owlCarousel({
       var allowedExtensions = /(\.pdf|\.doc)$/i;
       if(allowedExtensions.exec(this.value)) {
         boxFile.innerHTML = e.target.files[0].name;
-        console.log(e.target.files[0].name)
+        //console.log(e.target.files[0].name)
         boxFile.classList.add('attached');
       } else {
         this.value = '';
@@ -55,3 +55,4 @@ $("#owl1").owlCarousel({
       }
     }
   });
+}

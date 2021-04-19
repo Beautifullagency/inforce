@@ -1,66 +1,72 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require 'vendor/PHPMailer/Exception.php';
+require 'vendor/PHPMailer/PHPMailer.php';
+require 'vendor/PHPMailer/SMTP.php';;
+
 $name = $_POST['nombre'];
-$mail = $_POST['email'];
+$email = $_POST['email'];
 $phone = $_POST['phone'];
 $msj = $_POST['mensaje'];
 
+$archivo = $_FILES["file"];
 
-$uploadStatus = 1;
-            
-// Upload attachment file
-if(!empty($_FILES["attachment"]["name"])){
+//Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer(true);
+
+$body = "<b>Este mensaje fue enviado por: </b>" . $name . "<br>".
+"<br><b>Su e-mail es: </b>" . $email . "<br>".
+"<br><b>Teléfono de contacto: </b>" . $phone . "<br>".
+"<br><b>Mensaje: </b>" . $msj . "<br>". 
+"<br><b>Enviado el: </b>" . date('d/m/Y', time()). "<br>";
+
+
+
+
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'mail.inforce-seguridad.com.ar';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'web@inforce-seguridad.com.ar';                     //SMTP username
+    $mail->Password   = '8Jun7yONxz4n';                               //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 587;                                    //TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+
+    //Recipients
+    $mail->setFrom('web@inforce-seguridad.com.ar', 'Info-Inforce');
+    $mail->addAddress('web@inforce-seguridad.com.ar', $name);     //Add a recipient             //Name is optional
+    //$mail->addReplyTo('info@example.com', 'Information');
+    //$mail->addBCC('bcc@example.com');
+
+    //Attachments
+    if ($archivo){
+    $mail->addAttachment($archivo['tmp_name'], $archivo['name']); 
+    }        //Add attachments
+    //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->CharSet = 'UTF-8';
+    $mail->Subject = 'Nuevo mensaje de Inforce-seguridad.com.ar';
+    $mail->Body    = $body;
+
+    $mail->send();
+    $mail->ClearAttachments();
+    header("Location:index.html");
+    echo 'Message has been sent';
+   
+
     
-    // File path config
-    $targetDir = "uploads/";
-    $fileName = basename($_FILES["attachment"]["name"]);
-    $targetFilePath = $targetDir . $fileName;
-    $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
-    
-    // Allow certain file formats
-    $allowTypes = array('pdf', 'doc', 'docx', 'jpg', 'png', 'jpeg');
-    if(in_array($fileType, $allowTypes)){
-        // Upload file to the server
-        if(move_uploaded_file($_FILES["attachment"]["tmp_name"], $targetFilePath)){
-            $uploadedFile = $targetFilePath;
-        }else{
-            $uploadStatus = 0;
-            $statusMsg = "Sorry, there was an error uploading your file.";
-        }
-    }else{
-        $uploadStatus = 0;
-        $statusMsg = 'Sorry, only PDF, DOC, JPG, JPEG, & PNG files are allowed to upload.';
-    }
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-$header = 'From: ' . $mail . " \r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
-
-$message = "Este mensaje fue enviado por: " . $name . " \r\n";
-$message .= "Su e-mail es: " . $mail . " \r\n";
-$message .= "Teléfono de contacto: " . $phone . " \r\n";
-$message .= "Mensaje: " . $msj . " \r\n";
-$message .= "Enviado el: " . date('d/m/Y', time());
-
-$para = "javier_9333@hotmail.com";
-$asunto = "Mensaje de mi sitio web";
-
-mail($para, $asunto, utf8_decode($message), $header);
-
-header("Location:index.html");  
+  
 ?>
+
