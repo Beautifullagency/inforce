@@ -29,13 +29,13 @@
   display: none;
 }
 #trab-nosotros .invoiceBox label {
-	display: block;
+  display: block;
 }
 #trab-nosotros .boxFile {
   font-weight: 600;
-	display: inline-block;
+  display: inline-block;
   width: 100%;
-  box-shadow: 0px 20px 45px #0000001A;
+  box-shadow: 0px 20px 45px #0000001a;
   background: #fff;
   color: #312783;
   padding: 10px;
@@ -46,20 +46,20 @@
   transition: all 0.3s;
 }
 #trab-nosotros .boxFile:hover {
-	cursor: pointer;
-	background: #312783;
-	color: #fff;
+  cursor: pointer;
+  background: #312783;
+  color: #fff;
 }
 #trab-nosotros .boxFile i {
-	display: block;
-	font-size: 26px;
-	margin-bottom: 5px;
+  display: block;
+  font-size: 26px;
+  margin-bottom: 5px;
 }
 #trab-nosotros .attached,
 #trab-nosotros .attached:hover,
 #trab-nosotros .attached:focus {
-	background: #312783;
-	color: #fff;
+  background: #312783;
+  color: #fff;
 }
 /*SEGURIDAD FISICA*/
 /*BANNER*/
@@ -74,6 +74,15 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+@media (max-width: 425px) {
+  #seg-fisica .banner {
+    background: url(../img/seguridadfisica/backgroun-hero-img-mobil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+  }
 }
 #seg-fisica .inner {
   max-width: 300px;
@@ -135,7 +144,7 @@
 #seg-virtual .virt-inner {
   background: #fff;
   padding: 25px;
-  border-radius:0 0 8px 8px;
+  border-radius: 0 0 8px 8px;
   height: 350px;
 }
 #seg-virtual .virt-inner h4 {
@@ -144,8 +153,8 @@
 #seg-virtual .virt-trajetas img {
   border-radius: 8px 8px 0 0;
 }
-#seg-virtual .virt-trajetas  div {
-  box-shadow: 0px 10px 45px #00000026; 
+#seg-virtual .virt-trajetas div {
+  box-shadow: 0px 10px 45px #00000026;
   border-radius: 0 0 8px 8px;
 }
 @media (max-width: 425px) {
@@ -229,7 +238,7 @@
   height: 90%;
 }
 #app .s-inner {
-   border-radius: 8px 0 0 8px;
+  border-radius: 8px 0 0 8px;
 }
 #app .s-inner div {
   margin-bottom: 40px;

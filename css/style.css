@@ -425,7 +425,7 @@ textarea {
   }
   #home .banner {
     position: relative;
-    background: url("../img/backgroun-hero-img.png");
+    background: url("../img/backgroun-hero-img-mobil.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 0%;
@@ -447,7 +447,6 @@ textarea {
   /*SECCION 2*/
   .t {
     width: 90%;
-    height: 450px;
     border-radius: 8px;
     margin-bottom: 20px;
   }
