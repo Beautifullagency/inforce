@@ -11,6 +11,15 @@
   font-weight: 600;
   color: #fff;
 }
+@media (max-width: 425px) {
+  #contacto .banner {
+    background: url('../img/contacto/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+  }
+}
 /*TRABAJA CON NOSOTROS*/
 /*BANNER*/
 #trab-nosotros .banner {
@@ -24,6 +33,15 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+@media (max-width: 425px) {
+  #trab-nosotros .banner {
+    background: url('../img/trabaja/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+  }
 }
 #trab-nosotros .invoiceBox > input {
   display: none;
@@ -141,6 +159,15 @@
   justify-content: center;
   color: #fff;
 }
+@media (max-width: 425px) {
+  #seg-virtual .banner {
+    background: url('../img/seguridadvirtual/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  
+  }
+}
 #seg-virtual .virt-inner {
   background: #fff;
   padding: 25px;
@@ -180,6 +207,13 @@
   justify-content: center;
   color: #fff;
 }
+@media (max-width: 425px) {
+  #seg-combinada .banner {
+    background: url('../img/seguridadcombinada/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;  
+  }
+}
 #seg-combinada .med,
 #app .med,
 #limpieza .med {
@@ -208,7 +242,7 @@
     margin-right: auto;
   }
 }
-/*SEGURIDAD COMBINADA*/
+/*APP*/
 /*BANNER*/
 #app .banner {
   margin-top: 71px;
@@ -221,6 +255,13 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+@media (max-width: 425px) {
+  #app .banner {
+    background: url('../img/app/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;  
+  }
 }
 #app .inner-app {
   padding: 20px 24px 20px 24px;
@@ -256,4 +297,11 @@
   align-items: center;
   justify-content: center;
   color: #fff;
+}
+@media (max-width: 425px) {
+  #limpieza .banner {
+    background: url('../img/limpieza/backgroun-hero-img-mobil.png');
+    background-size: cover;
+    background-repeat: no-repeat;  
+  }
 }
