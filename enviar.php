@@ -1,5 +1,7 @@
 <?php
-
+define("SITE_KEY", '6LfQTrYaAAAAADQRiPh0EcANjnWETd3qXDh3YFIW');
+define("SECRET_KEY", '6LfQTrYaAAAAADTXHzZEPquOCd-O8LfgBcsTgGL');
+ 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -66,6 +68,47 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+
+
+
+
+
+
+
+
+$token = $_POST['token'];
+$action = $_POST['action'];
+ 
+// call curl to POST request
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL,"https://www.google.com/recaptcha/api/siteverify");
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array('secret' => SECRET_KEY, 'response' => $token)));
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$response = curl_exec($ch);
+curl_close($ch);
+$arrResponse = json_decode($response, true);
+ 
+// verify the response
+if($arrResponse["success"] == '1' && $arrResponse["action"] == $action && $arrResponse["score"] >= 0.5) {
+    // valid submission
+    // go ahead and do necessary stuff
+} else {
+    // spam submission
+    // show error message
+}
+
+<script type="text/javascript">
+grecaptcha.ready(function() {
+    grecaptcha.execute('reCAPTCHA_site_key', {action: 'submit'}).then(function(token) {
+        // Add your logic to submit to your backend server here.
+    });
+  });
+closelog('anda')
+
+</script>
+
 
   
 ?>

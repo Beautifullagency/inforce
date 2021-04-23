@@ -17,7 +17,7 @@ $('document').ready(function () {
     return this.optional(element) || phoneregex.test(value)
   })
 
-    $('#formulario-contacto').validate({
+  $('#formulario-contacto').validate({
     rules: {
       nombre: {
         required: true,

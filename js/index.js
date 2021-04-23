@@ -56,3 +56,14 @@ if (document.querySelector('#file')) {
     }
   });
 }
+/*
+$('#formulario-contacto').submit(function (event) {
+  grecaptcha.ready(function () {
+  grecaptcha.execute('<?php echo SITE_KEY;?>', { action: 'subscribe_newsletter' }).then(function (token) {
+    $('#formulario-contacto').prepend('<input type="hidden" name="token" value="' + token + '">');
+    $('#formulario-contacto').prepend('<input type="hidden" name="action" value="subscribe_newsletter">');
+    $('#formulario-contacto').unbind('submit').submit();
+    console.log(token)
+  });;
+});
+});*/
