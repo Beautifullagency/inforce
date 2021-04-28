@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfQTrYaAAAAADQRiPh0EcANjnWETd3qXDh3YFIW"></script>
 </head>
 
 <body id="contacto">
@@ -84,12 +85,13 @@
                     <p class="no-16 mb-4 text-sm-start text-center">Córdoba, Argentina.</p>
                 </div>
                 <p class="no-16 text-sm-start text-center">Telefono: 0351 4818269</p>
-              
+
             </div>
             <div class="col-sm sec8-1">
                 <div class="cat-form v-align" id="contact">
                     <div class="cat-form-1">
-                        <form method="post" id="formulario-contacto" role="form" autocomplete="on" enctype="multipart/form-data">
+                        <form method="post" id="formulario-contacto" role="form" autocomplete="on"
+                            enctype="multipart/form-data">
                             <div class="form-group has-success mb-2">
                                 <label class="m-14" for="">Nombre</label>
                                 <input class="m-16" type="text" name="nombre" placeholder="Escribe tu nombre"
@@ -116,6 +118,7 @@
                                 <button class="ka-20 btn-form" type="submit">
                                     CONSULTÁ POR TU PRESUPUESTO</button>
                             </div>
+                            <input type="hidden" name="token" id="google-response">
                         </form>
                     </div>
                 </div>
@@ -133,7 +136,7 @@
     <!--JQUERY-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!--OWL-CAROUSEL-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!--VALIDATOR-->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
     <!--BOOTSTRAP-->

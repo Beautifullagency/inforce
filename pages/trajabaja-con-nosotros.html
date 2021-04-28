@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfQTrYaAAAAADQRiPh0EcANjnWETd3qXDh3YFIW"></script>
 
 </head>
 
@@ -91,12 +92,12 @@
                     <p class="no-16 mb-4 text-sm-start text-center">Córdoba, Argentina.</p>
                 </div>
                 <p class="no-16 text-sm-start text-center">Telefono: 0351 4818269</p>
-                
+
             </div>
             <div class="col-sm sec8-1">
-                <div class="cat-form v-align" id="contact" enctype="multipart/form-data">
+                <div class="cat-form v-align" id="contact" >
                     <div class="cat-form-1">
-                        <form method="post" id="formulario-contacto" role="form" autocomplete="on">
+                        <form method="POST" id="formulario-contacto" role="form" autocomplete="on" enctype="multipart/form-data">
                             <div class="form-group has-success mb-2">
                                 <label class="m-14" for="">Nombre</label>
                                 <input class="m-16" type="text" name="nombre" placeholder="Escribe tu nombre"
@@ -120,8 +121,9 @@
                                             Adjuntá tu CV
                                         </div>
                                     </label>
+                                    <span id="error" class="help-block"></span>
                                     <input id="file" multiple="false" name="file" size="8000" type="file"
-                                        accept="application/pdf,application/docx">
+                                        accept="application/pdf,application/docx" required>
                                 </div>
                             </div>
                             <div class="form-group mb-2">
@@ -134,6 +136,7 @@
                                 <button class="ka-20 btn-form" type="submit">
                                     ENVIAR CV</button>
                             </div>
+                            <input type="hidden" name="token" id="google-response">
                         </form>
                     </div>
                 </div>

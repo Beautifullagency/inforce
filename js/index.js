@@ -43,27 +43,28 @@ if (document.querySelector('#file')) {
     boxFile.classList.remove('attached');
     boxFile.innerHTML = boxFile.getAttribute("data-text");
     if(this.value != '') {
-      var allowedExtensions = /(\.pdf|\.doc)$/i;
+      var allowedExtensions = /(\.pdf|\.docx)$/i;
       if(allowedExtensions.exec(this.value)) {
         boxFile.innerHTML = e.target.files[0].name;
-        //console.log(e.target.files[0].name)
+        console.log(e.target.files[0].name)
         boxFile.classList.add('attached');
       } else {
         this.value = '';
-        alert('El archivo que intentas subir no está permitido.\nLos archivos permitidos son .pdf, .jpg, .jpeg, .png, .gif y .tiff');
+        alert('El archivo que intentas subir no está permitido.\nLos archivos permitidos son pdf o documentos Word');
         boxFile.classList.remove('attached');
       }
     }
   });
 }
-/*
-$('#formulario-contacto').submit(function (event) {
-  grecaptcha.ready(function () {
-  grecaptcha.execute('<?php echo SITE_KEY;?>', { action: 'subscribe_newsletter' }).then(function (token) {
-    $('#formulario-contacto').prepend('<input type="hidden" name="token" value="' + token + '">');
-    $('#formulario-contacto').prepend('<input type="hidden" name="action" value="subscribe_newsletter">');
-    $('#formulario-contacto').unbind('submit').submit();
-    console.log(token)
-  });;
+
+grecaptcha.ready(function() {
+  grecaptcha.execute( '6LfQTrYaAAAAADQRiPh0EcANjnWETd3qXDh3YFIW', {action: 'homepage'}).then(function(token) {
+      // Add your logic to submit to your backend server here.
+      $('#google-response').val(token)
+  });
 });
-});*/
+
+
+
+
+console.log($('.boxFile').hasClass('attached'))

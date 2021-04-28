@@ -1,4 +1,6 @@
 $('document').ready(function () {
+  
+  let body = $('body')
 
 
   // Validación para campos de texto exclusivo, sin caracteres especiales ni números
@@ -16,7 +18,8 @@ $('document').ready(function () {
   $.validator.addMethod('validnumber', function (value, element) {
     return this.optional(element) || phoneregex.test(value)
   })
-
+   
+  //fomularios de contacto y presupuesto
   $('#formulario-contacto').validate({
     rules: {
       nombre: {
@@ -73,9 +76,39 @@ $('document').ready(function () {
       $(element).closest('.form-group').find('.help-block').html('')
     },
     submitHandler: function (form) {
-      form.action = '../enviar.php'
-      form.submit()
-      alert('Formulario enviado correctamente')
+
+      if(body[0].id === 'home') {
+        form.action = '../enviarhome.php'
+        form.submit()
+        alert('Formulario de presupuesto enviado correctamente')
+      }
+      if(body[0].id === 'trab-nosotros') {
+
+        if ($('.boxFile').hasClass('attached')){
+          form.action = '../pages/enviarcv.php'
+          form.submit()
+          alert('Formulario de curriculum enviado correctamente')
+        }else{
+          alert('Debes adjuntar tu CV')
+        }
+        
+      }
+      if(body[0].id === 'contacto') {
+        form.action = '../pages/enviarcontacto.php'
+        form.submit()
+        alert('Formulario de contacto enviado correctamente')
+      }
+      
+   
     },
   })
+
+  //formulario de envio de cv
+
+
+
+
+
+
+
 })
